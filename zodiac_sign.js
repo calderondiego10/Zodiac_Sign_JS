@@ -14,46 +14,43 @@ switch(mes){
     }
     break;
   case "febrero":
-    if(dia >= 30){
+    if(dia === 0 || dia >= 30){
       signo = "Fecha Invalida";
     }
-    else if(dia >= 19){
-      signo = "Piscis";
-    }
     else{
-      signo = "Acuario";
+      signo = (dia >= 20) ? "Piscis":"Acuario";
     }
     break;
   case "marzo":
-    if(dia >= 21){
-      signo = "Aries";
+    if(dia === 0 || dia >= 32){
+      signo = "Fecha Invalida";
     }
     else{
-      signo = "Piscis";
+      signo = (dia >= 21) ? "Aries":"Piscis";
     }
     break;
   case "abril":
-    if(dia >= 21){
-      signo = "Tauro";
+    if(dia === 0 || dia >= 31){
+      signo = "Fecha Invalida";
     }
     else{
-      signo = "Aries";
+      signo = (dia >= 21) ? "Tauro":"Aries";
     }
     break;
   case "mayo":
-    if(dia >= 21){
-      signo = "Geminis";
+    if(dia === 0 || dia >= 32){
+      signo = "Fecha Invalida";
     }
     else{
-      signo = "Tauro";
+      signo = (dia >= 21) ? "Geminis":"Tauro";
     }
     break;
   case "junio":
-    if(dia >= 21){
-      signo = "Cancer";
+    if(dia === 0 || dia >= 31){
+      signo = "Fecha Invalida"
     }
     else{
-      signo = "Geminis";
+      signo = (dia >= 21) ? "Cancer":"Geminis"
     }
     break;
   case "julio":
@@ -61,33 +58,48 @@ switch(mes){
       signo = "Fecha Invalida"
     }
     else{
-    signo = (dia >= 23) ? "Leo":"Cancer";
+      signo = (dia >= 23) ? "Leo":"Cancer";
     }
     break;
   case "agosto":
-    signo = (dia >= 24) ? "Virgo":"Leo";
-    break;
-  case "septiembre":
-    if(dia >= 23){
-      signo = "Libra";
+    if(dia === 0 || dia >= 32){
+      signo = "Fecha Invalida"
     }
     else{
-      signo = "Virgo";
+      signo = (dia >= 24) ? "Virgo":"Leo"
+    }
+    break;
+  case "septiembre":
+    if(dia === 0 || dia >= 31){
+      signo = "Fecha Invalida"
+    }
+    else{
+      signo = (dia >= 23) ? "Libra":"Virgo"
     }
     break;
   case "octubre":
-    if(dia >= 24){
-      signo = "Escorpio";
+    if(dia === 0 || dia >= 32){
+      signo = "Fecha Invalida"
     }
     else{
-      signo = "Libra";
+      signo = (dia >= 24) ? "Escorpio":"Libra"
     }
     break;
   case "noviembre":
+    if(dia === 0 || dia >= 31){
+      signo = "Fecha Invalida"
+    }
+    else{
     signo = (dia >= 23) ? "Sagitario":"Escorpio";
+    }
     break;
   case "diciembre":
-    signo = (dia >=22) ? "Capricornio":"Sagitario";
+    if(dia === 0 || dia >= 32){
+      signo = "Fecha Invalida"
+    }
+    else{
+    signo = (dia >= 22) ? "Capricornio":"Sagitario";
+    }
     break;
    
   }
